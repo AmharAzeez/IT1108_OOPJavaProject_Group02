@@ -46,5 +46,16 @@ public class FarmerManagementView extends JFrame {
             listModel.addElement(f.toString());
             idField.setText(""); nameField.setText(""); locField.setText("");
         });
+
+
     }
+    public static void main(String[] args) {
+        // Make sure GUI runs on Event Dispatch Thread
+        SwingUtilities.invokeLater(() -> {
+            FarmerManagementView view = new FarmerManagementView();
+            view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            view.setVisible(true);
+        });
+    }
+
 }
